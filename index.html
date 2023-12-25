@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Zerion and Debank whitelist</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="prism.css"/>
+</head>
+<body>
+<header>
+  <h1 onclick="swapColors()">
+    <span style="color: rgb(25, 94, 242);">d</span>
+    <span style="color: rgb(255, 98, 56);">e</span>
+    <span style="color: rgb(25, 94, 242);">b</span>
+    <span style="color: rgb(255, 98, 56);">i</span>
+    <span style="color: rgb(25, 94, 242);">o</span>
+    <span style="color: rgb(255, 98, 56);">n</span>
+    </h1>
+  <a class="link" href="https://t.me/dalgerok" target="_blank">
+    <span>owner</span>
+  </a>
+  <a class="link" href="https://github.com/dalgerok" target="_blank">
+    <span>github</span>
+  </a>
+  <a class="donate" href="https://debank.com/profile/0xbaa93498a3bf60d01ef28ede66ba8bfd05975a4a" target="_blank">donate</a>
+
+</header>
+<nav>
+    <div class="exchange_buttons">
+        <button onclick="showFieldsZerion()" class="zerion_button" style="opacity: 1;"></button>
+        <button onclick="showFieldsDebank()" class="debank_button" style="opacity: 0.2;"></button>
+    </div>
+</nav>
+<main>
+  <section id="wallet-window">
+    <div class="title-wrapper">
+      <label for="wallets-input"> wallets</label>
+    </div>
+    <div class="text-area-container">
+      <div class="code-lines" id="wallet-lines">
+        <span>1</span>
+      </div>
+      <textarea
+        name="wallets-input"
+        id="wallets-input"
+        cols="30"
+        rows="100"></textarea>
+    </div>
+  </section>
+  <section id="code-window-debank" style="display: none;">
+    <div class="modal" id="code-copied-popup-debank">
+        <div class="modal-content">
+          <button onclick="closeAlertPopup('code-copied-popup-debank');">
+            ×
+          </button>
+          <p>copied</p>
+        </div>
+    </div>
+    <div class="title-wrapper">
+      <label for="wallets-input"> code</label>
+    </div>
+    <div class="text-area-container" id="area-code-debank">
+      <div class="code-lines" id="code-lines-debank">
+        <span>1</span>
+      </div>
+      <code class="language-html" id="code-output-debank"> </code>
+    </div>
+  </section>
+  <section id="code-window-zerion">
+    <div class="modal" id="code-copied-popup-zerion">
+        <div class="modal-content">
+          <button onclick="closeAlertPopup('code-copied-popup-zerion');">
+            ×
+          </button>
+          <p>copied</p>
+        </div>
+    </div>
+    <div class="styled-select">
+        <select id="zerion-select" >
+            <option>to my wallets</option>
+            <option>to watchlist</option>
+        </select>
+    </div>
+    <div class="title-wrapper">
+      <label for="wallets-input"> code</label>
+    </div>
+    <div class="text-area-container" id="area-code-zerion">
+      <div class="code-lines" id="code-lines-zerion">
+        <span>1</span>
+      </div>
+      <code class="language-html" id="code-output-zerion"> </code>
+    </div>
+  </section>
+</main>
+<script src="prism.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
