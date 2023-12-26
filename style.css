@@ -296,7 +296,10 @@ main section#wallet-window {
   gap: calc(0.5 * (1vw + 1vh));
 }
 #area-code-zerion {
-  max-height: calc(50vh - (1vh + 1vw) * 6.5 - 3vh);
+  max-height: calc(50vh - (1vh + 1vw) * 6.5 - 6vh);
+}
+#area-code-debank {
+    max-height: calc(50vh - (1vh + 1vw) * 6.5 - 2vh);
 }
 .text-area-container .code-lines {
   display: flex;
@@ -321,6 +324,7 @@ main section#wallet-window {
 
 
 .styled-select {
+    display: flex;
     width: 15%;
     height: 3vh;
     border: 0;
@@ -329,6 +333,10 @@ main section#wallet-window {
     background-color: #999999;
     font-size: calc(0.5 * (1vw + 1vh));
     font-family: "JetBrains Mono", sans-serif;
+}
+
+.styled-select a {
+    margin-left: 50px;
 }
     
 .styled-select select {
