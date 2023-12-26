@@ -149,7 +149,7 @@ const updateDebankCode = () => {
     lineNumbersDebank.innerHTML = ''
 
     isFirstUpdateDebank = false
-    const typingDelay = (2 * 1000) / code.length
+    const typingDelay = (0.5 * 1000) / code.length
     let index = 0
     codeOutputDebank.textContent = ''
 
@@ -197,7 +197,7 @@ const updateZerionCode = () => {
       lineNumbersZerion.innerHTML = ''
   
       isFirstUpdateZerion = false
-      const typingDelay = (2 * 1000) / code.length
+      const typingDelay = (0.5 * 1000) / code.length
       let index = 0
       codeOutputZerion.textContent = ''
   
