@@ -23,17 +23,51 @@ const generateDebankCode = () => {
         input.dispatchEvent(new Event('input', { bubbles: true }));
     }
 
+    function generateRandomString() {
+        let result = '';
+        const digits = '0123456789';
+    
+        for (let i = 0; i < 10; i++) {
+            const randomIndex = Math.floor(Math.random() * digits.length);
+            result += digits.charAt(randomIndex);
+        }
+    
+        return result;
+    }
+
     async function addWallets() {
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            if (button.textContent.includes('Add bundle')) {
+                button.click();
+            }
+        });
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        const randomBundleName = generateRandomString();
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            if (input.placeholder == 'Name') {
+                fillInput(input, randomBundleName);
+            }
+        });
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        const saveButtons = document.querySelectorAll('button');
+        saveButtons.forEach(button => {
+            if (button.textContent.includes('Save')) {
+                button.click();
+            }
+        });
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         for (let i = 0; i < wallets.length; i++) {
             console.log(\`adding wallet \${i + 1} out of \${wallets.length}\`);
 
             const buttons = document.querySelectorAll('button');
             buttons.forEach(button => {
                 if (button.textContent.includes('Add address')) {
-                button.click()
+                    button.click()
                 }
             });
-            await new Promise((resolve) => setTimeout(resolve, 300));
+            await new Promise((resolve) => setTimeout(resolve, 1000));
 
 
             const inputs = document.querySelectorAll('input');
