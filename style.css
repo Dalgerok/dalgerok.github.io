@@ -54,8 +54,8 @@ header h1 span {
 a.donate {
   font-family: "JetBrains Mono", sans-serif;
   text-decoration: none;
-  color: white;
-  border: calc(0.05 * (1vw + 1vh)) solid white;
+  color: wheat;
+  border: calc(0.05 * (1vw + 1vh)) solid wheat;
   font-size: calc(0.45 * (1vw + 1vh));
   padding: calc(0.5 * (1vw + 1vh)) calc(1 * (1vw + 1vh));
   cursor: pointer;
