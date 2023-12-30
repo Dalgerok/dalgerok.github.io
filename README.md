@@ -1,1 +1,1 @@
-[Visit Site](http://debion.xyz)
+[Zerion and Debank whitelist](http://debion.xyz)
