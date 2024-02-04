@@ -59,6 +59,7 @@ a.donate {
   font-size: calc(0.45 * (1vw + 1vh));
   padding: calc(0.5 * (1vw + 1vh)) calc(1 * (1vw + 1vh));
   cursor: pointer;
+  background-color: rgb(25, 94, 242);
 
   animation: blink 3s infinite; /* Animation duration is set to 1 second */
 }
